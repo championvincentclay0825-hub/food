@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>揪團訂餐統計器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍴 揪團訂餐統計系統</h1>
+
+        <section class="card">
+            <h3>1. 設定菜單項目</h3>
+            <div class="input-group">
+                <input type="text" id="foodInput" placeholder="輸入餐點名稱 (如：雞腿便當)">
+                <button onclick="addFoodItem()">新增餐點</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>2. 我要訂購</h3>
+            <div class="input-group">
+                <input type="text" id="userName" placeholder="你的名字">
+                <select id="foodSelect">
+                    <option value="">-- 請選擇餐點 --</option>
+                </select>
+                <button onclick="addOrder()" class="btn-order">提交訂單</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>3. 統計結果</h3>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>餐點名稱</th>
+                        <th>訂購人數</th>
+                        <th>訂購人名單</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
